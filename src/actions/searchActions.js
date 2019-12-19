@@ -18,10 +18,10 @@ export const fetchMovies = text => dispatch => {
     .catch(error => console.log(error));
 };
 
-export const fetchMovie = text => dispatch => {
+export const fetchMovie = id => dispatch => {
   const { REACT_APP_API_URL } = process.env;
   axios
-    .get(`${REACT_APP_API_URL}&i=${text}`)
+    .get(`${REACT_APP_API_URL}&i=${id}`)
     .then(response =>
       dispatch({
         type: FETCH_MOVIE,
