@@ -9,13 +9,16 @@ import {
 
 class SearchForm extends Component {
   onChange = event => {
-    this.props.searchMovie(event.target.value);
+    const { searchMovie } = this.props;
+    const { value } = event.target;
+    searchMovie(value);
   };
 
   onSubmit = event => {
     event.preventDefault();
-    this.props.fetchMovies(this.props.text);
-    this.props.setLoading();
+    const { fetchMovies, text, setLoading } = this.props;
+    fetchMovies(text);
+    setLoading();
   };
 
   render() {

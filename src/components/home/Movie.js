@@ -7,8 +7,9 @@ import { fetchMovie, setLoading } from "../../actions/searchActions";
 
 export class Movie extends Component {
   componentDidMount() {
-    this.props.fetchMovie(this.props.match.params.id);
-    this.props.setLoading();
+    const {fetchMovie,setLoading,match}=this.props;
+    fetchMovie(match.params.id);
+    setLoading();
   }
   render() {
     const { loading, movie } = this.props;
