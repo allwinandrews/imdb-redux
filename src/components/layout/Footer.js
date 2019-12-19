@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="col-md-12">
           <div className="footer p-3 mt-4 text-center bg-dark text-light">
             <a
-              href="http://www.omdbapi.com/"
+              href="https://www.omdbapi.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
